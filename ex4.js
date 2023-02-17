@@ -17,6 +17,7 @@ function isPalindrom (num) {
 	} else {
 		console.log(`${initialNumber} nu este palindorm`);
 	}
-}
+} 
+console.log();
 isPalindrom(12321);
 isPalindrom(123131);

@@ -1,9 +1,14 @@
-// Lui Olea îi plac numerele palindrom. Un număr este considerat palindrom dacă răsturnatul 
-// său (citit de la dreapta la stânga) este egal cu originalul (Exemplu: numărul 12321 este palindrom).
-
+// Olea s-a entuziasmat și mai tare cu numerele palindrom și vrea să țină o evidență
+// cu acestea. Ea s-a gândit să facă o listă cu toate numerele palindrom până la
+// 10000 ca să îi fie mai ușor să le găsească mai târziu.
 // Cerințe:
-// Să se determine dacă o variabilă conține o valoare palindrom.
-// Afișați în consolă numărul și un mesaj dacă acesta este sau nu palindrom.
+// 1. Folosiți implementarea anterioară pentru palindrom și includeți-o într-o
+// funcție
+// 2. Folosiți funcția pentru a verifica numerele care sunt palindrom
+// 3. Creați un array care să conțină numerele palindrom.
+// 4. Afișați numerele din array în consolă.
+// else {
+	//	console.log(`${initialNumber} nu este palindorm`);
 
 function isPalindrom (num) {
 	let initialNumber = num;
@@ -13,11 +18,15 @@ function isPalindrom (num) {
 		num = Math.floor(num / 10);
 	}
 	if (initialNumber === finalNum) {
-		console.log('este un palindrom ' + initialNumber);
-	} else {
-		console.log(`${initialNumber} nu este palindorm`);
+		return true
 	}
-} 
-console.log();
-isPalindrom(12321);
-isPalindrom(123131);
+	return false
+	 
+}
+
+
+for (let i =  0; i <= 200; i++ ) {
+	if (isPalindrom(i)) {
+		console.log(i);
+	}
+}

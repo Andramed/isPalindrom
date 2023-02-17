@@ -10,6 +10,8 @@
 // else {
 	//	console.log(`${initialNumber} nu este palindorm`);
 
+	
+	let palindromNumbers = [];
 function isPalindrom (num) {
 	let initialNumber = num;
 	let finalNum = 0;
@@ -17,16 +19,25 @@ function isPalindrom (num) {
 		finalNum = num % 10 + finalNum * 10;
 		num = Math.floor(num / 10);
 	}
-	if (initialNumber === finalNum) {
+	/*if (initialNumber === finalNum) {
 		return true
 	}
-	return false
+	return false*/
+	return initialNumber === finalNum ? true : false
+	
 	 
 }
-
-
 for (let i =  0; i <= 200; i++ ) {
 	if (isPalindrom(i)) {
-		console.log(i);
+		palindromNumbers.push(i);
+	
 	}
+	
 }
+ /*for (let palindromNumber of palindromNumbers){
+	console.log(palindromNumber);
+
+ }*/
+
+
+  palindromNumbers.forEach(palindromNumber => console.log(palindromNumber))
